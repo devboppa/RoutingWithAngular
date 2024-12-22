@@ -12,7 +12,8 @@ import { inject } from '@angular/core';
 
 const dummyCanMatch: CanMatchFn = (route, segments) => {
   const router = inject(Router);
-  return new RedirectCommand(router.parseUrl('/unauthorized'));
+  //   return new RedirectCommand(router.parseUrl('/unauthorized'));
+  return true;
 };
 
 export const routes: Routes = [
